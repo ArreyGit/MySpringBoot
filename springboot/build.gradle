@@ -11,6 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
@@ -29,7 +30,14 @@ configurations {
 }
 
 dependencies {
+    //添加web 依赖
     implementation('org.springframework.boot:spring-boot-starter-web')
+    //内置tomcat 依赖
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    //测试 依赖
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+    //mybatis 依赖
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.3.2'
+    //mysql驱动 依赖
+    runtime group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
 }

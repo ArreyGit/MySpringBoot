@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * @RestController 相当与ResponseBody + Controller
  * GetMapping 相当与@RequestMapping(method = RequestMethod.GET)的缩写
  * 类似的还有@PostMapping、@PutMapping、@DeleteMapping。
  */

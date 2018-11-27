@@ -36,8 +36,10 @@ dependencies {
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     //测试 依赖
     testImplementation('org.springframework.boot:spring-boot-starter-test')
-    //mybatis 依赖
+  /*  //mybatis 依赖
     compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.3.2'
     //mysql驱动 依赖
-    runtime group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+    runtime group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'*/
+    //rabbitmq
+    compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: '2.1.1.RELEASE'
 }

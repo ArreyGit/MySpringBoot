@@ -1,9 +1,6 @@
 spring:
-  datasource:
-    url:jdbc:mysql://10.202.80.108:3306/SCRM?useSSL=false
-    username:root
-    password:root
-    driver-class-name:com.mysql.jdbc.Driver
-  mybatis:
-    configuration:
-    map-underscore-to-camel-case:true #ø™∆ÙÕ’∑Â”≥…‰
+  rabbitmq:
+    host: 119.29.221.182
+    port: 5672
+    username: Arrey
+    password: Arrey

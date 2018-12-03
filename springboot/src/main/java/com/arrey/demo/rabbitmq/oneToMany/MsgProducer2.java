@@ -14,7 +14,7 @@ import java.util.UUID;
  * 消息生产者
  */
 @Component
-public class MsgProducer implements RabbitTemplate.ConfirmCallback {
+public class MsgProducer2 implements RabbitTemplate.ConfirmCallback {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     /**
      * 由于rabbitTemplate的scope属性设置为ConfigurableBeanFactory.SCOPE_PROTOTYPE，所以不能自动注入
@@ -25,7 +25,7 @@ public class MsgProducer implements RabbitTemplate.ConfirmCallback {
      * 构造方法注入rabbitTemplate
      */
     @Autowired
-    public MsgProducer(RabbitTemplate rabbitTemplate) {
+    public MsgProducer2(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
         //rabbitTemplate如果为单例的话，那回调就是最后设置的内容
         rabbitTemplate.setConfirmCallback(this);

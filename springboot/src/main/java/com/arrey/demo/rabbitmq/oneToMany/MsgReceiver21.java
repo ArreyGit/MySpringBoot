@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @RabbitListener(queues = RabbitConfig.QUEUE_A)
-public class MsgReceiver2 {
+public class MsgReceiver21 {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @RabbitHandler

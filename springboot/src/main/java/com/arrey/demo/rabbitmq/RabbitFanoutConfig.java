@@ -4,12 +4,12 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.Queue;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 /**
+ * 广播模式
  * fanout 类型：一个发送到交换机（Exchange）的消息都会转发到与该交换机绑定的所有队列上。
- *  不处理路由键。只需要将队列绑定到交换机上。
+ * 由键。只需要将队列绑定到交换机上。
  *
  */
 @Configuration

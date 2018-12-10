@@ -17,7 +17,7 @@ import java.util.UUID;
 public class MsgProducer2 implements RabbitTemplate.ConfirmCallback {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     /**
-     * 由于rabbitTemplate的scope属性设置为ConfigurableBeanFactory.SCOPE_PROTOTYPE，所以不能自动注入
+     * 由于rabbitTemplate的scope属性设置为ConfigurableBeanFactory.SCOPE_PROTOTYPE，所以不能使用autowire自动注入
      */
     private RabbitTemplate rabbitTemplate;
 
@@ -48,7 +48,7 @@ public class MsgProducer2 implements RabbitTemplate.ConfirmCallback {
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         logger.info(" 回调id:" + correlationData);
         if (ack) {
-            logger.info("消息成功消费");
+            logger.info("one to many 消息成功消费");
         } else {
             logger.info("消息消费失败:" + cause);
         }

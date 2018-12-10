@@ -48,7 +48,7 @@ public class MsgProducer implements RabbitTemplate.ConfirmCallback {
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         logger.info(" 回调id:" + correlationData);
         if (ack) {
-            logger.info("消息成功消费");
+            logger.info("hello world消息成功消费");
         } else {
             logger.info("消息消费失败:" + cause);
         }
